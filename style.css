@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --side-margin: 18vw;
+    --accent-color: #5193c9;
+}
+
+.header {
+    display: grid;
+    place-content: center;
+    padding: 60px;
+}
+
+.header .name {
+    font-size: 4.4em;
+    font-style: italic;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: black;
+    text-decoration: none;
+}
+
+.email {
+    font-size: 1.2em;
+    font-style: italic;
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.line {
+    height: 1px;
+    width: calc(100vw - var(--side-margin) * 2);
+    margin-left: var(--side-margin);
+    margin-bottom: 100px;
+    background-color: rgb(131, 131, 131);
+}
+
+.project {
+    margin: 0 var(--side-margin);
+    margin-bottom: 60px;
+}
+
+.project .content {
+    display: flex;
+}
+
+.project h3 {
+    font-size: 1.8em;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+
+.project .title {
+    display: flex;
+}
+
+.project .indent {
+    width: 3px;
+    height: 40px;
+    margin-right: 10px;
+    background-color: var(--accent-color);
+}
+
+.project .description {
+    font-size: 1.2em;
+    margin-left: 20px;
+}
+
+.project .text {
+    margin-right: 40px;
+    margin-bottom: 40px;
+}
+
+.image-container {
+    width: 17vw;
+    margin: 0 30px;
+}
+
+.project .p-image {
+    width: 17vw;
+    margin-bottom: 10px;
+}
+
+.project .images {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    padding-top: 40px;
+}
+
+.project .l-image {
+    width: 90%;
+    margin-bottom: 10px;
+}
+
+.project .caption {
+    color: #666666;
+    margin-bottom: 30px;
+}
+
+.project .learn-more {
+    color: var(--accent-color);
+    text-decoration: none;
+    padding: 10px 15px;
+    border: 1px solid var(--accent-color);
+    border-radius: 5px;
+    transition: background-color 0.2s ease;
+}
+
+.project .learn-more:hover {
+    background-color: #ceeaf1;
+    transition: background-color 0.2s ease;
+}
+
+.footer {
+    margin: 0 var(--side-margin);
+    padding: 80px 20px;
+    display: flex;
+    width: calc(100vw - var(--side-margin) * 2);
+}
+
+.footer p {
+    margin-right: 50px;
+}
+
+.footer a {
+    color: var(--accent-color);
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 1000px) {
+    :root {
+        --side-margin: 10vw;
+    }
+
+    .header .name {
+        font-size: 3em;
+    }
+
+    .project h3 {
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .project .content {
+        flex-direction: column;
+    }
+
+    .image-container {
+        width: calc(100vw - var(--side-margin) * 2 - 40px);
+        margin: 0 20px;
+        margin-top: 60px;
+    }
+    
+    .project .p-image {
+        width: calc(100vw - var(--side-margin) * 2 - 40px);
+    }
+}
